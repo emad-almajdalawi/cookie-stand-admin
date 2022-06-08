@@ -1,8 +1,8 @@
 
 function Header() {
   return (
-    <header>
-      <h2>Cookie Stand Admin</h2>
+    <header className = 'py-8 px-8 bg-emerald-500'>
+      <h1 className ='text-4xl font-bold'>Cookie Stand Admin</h1>
     </header>
     
   )
