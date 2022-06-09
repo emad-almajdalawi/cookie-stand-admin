@@ -9,8 +9,8 @@ function Main() {
     event.preventDefault();
     const CreateReport = {
       location: event.target.location?.value,
-      minCookies: event.target.minCust?.value,
-      maxCookies: event.target.maxCust?.value,
+      minCust: event.target.minCust?.value,
+      maxCust: event.target.maxCust?.value,
       avgCookies: event.target.avgCookies?.value,
     };
 
