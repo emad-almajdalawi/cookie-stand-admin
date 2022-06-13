@@ -27,7 +27,7 @@ function Main(props) {
       </dev>
       <br />
       {/* <p>{JSON.stringify(report)}</p> */}
-        <ReportTable customersCountList={props.customersCountList} />
+      <ReportTable customersCountList={props.customersCountList} />
     </main>
   )
 }
