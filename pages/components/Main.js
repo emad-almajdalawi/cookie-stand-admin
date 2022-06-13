@@ -26,7 +26,6 @@ function Main(props) {
         <Form formHandler={props.formHandler} />
       </dev>
       <br />
-      <p>No Cockie Stands Available</p>
       {/* <p>{JSON.stringify(report)}</p> */}
         <ReportTable customersCountList={props.customersCountList} />
     </main>

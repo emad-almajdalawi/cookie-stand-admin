@@ -1,3 +1,3 @@
-let responses = [23, 11, 84, 67, 48, 71, 97, 19, 33, 41, 99, 65, 52, 8];
+let responses = [48, 42, 30, 24, 42, 24, 36, 42, 42, 48, 36, 42, 24, 36];
 
 export default responses;

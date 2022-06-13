@@ -1,5 +1,9 @@
 
 function ReportTable(props) {
+    if (props.customersCountList.length === 0) {
+        return(<h2 className="">No Cockie Stands Available</h2>)
+    }
+
     return (
         <div className=" grid grid-cols-1 grid-rows-1 justify-items-center">
             <table className="border-collapse table-fixed bg-emerald-400 w-3/4 border-2 border-black shadow-lg">
@@ -26,20 +30,20 @@ function ReportTable(props) {
                         props.customersCountList.map(customersCount => {
                             <tr>
                                 <td>{props.location}</td>
-                                <td>{props.c6am}</td>
-                                <td>{props.c7am}</td>
-                                <td>{props.c8am}</td>
-                                <td>{props.c9am}</td>
-                                <td>{props.c10am}</td>
-                                <td>{props.c11am}</td>
-                                <td>{props.c12pm}</td>
-                                <td>{props.c1pm}</td>
-                                <td>{props.c2pm}</td>
-                                <td>{props.c3pm}</td>
-                                <td>{props.c4pm}</td>
-                                <td>{props.c5pm}</td>
-                                <td>{props.c6pm}</td>
-                                <td>{props.c7pm}</td>
+                                <td>{props.t6AM}</td>
+                                <td>{props.t7am}</td>
+                                <td>{props.t8am}</td>
+                                <td>{props.t9am}</td>
+                                <td>{props.t10am}</td>
+                                <td>{props.t11am}</td>
+                                <td>{props.t12pm}</td>
+                                <td>{props.t1pm}</td>
+                                <td>{props.t2pm}</td>
+                                <td>{props.t3pm}</td>
+                                <td>{props.t4pm}</td>
+                                <td>{props.t5pm}</td>
+                                <td>{props.t6pm}</td>
+                                <td>{props.t7pm}</td>
                                 <td>{props.total}</td>
                             </tr>
                         })
