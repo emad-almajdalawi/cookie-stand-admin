@@ -47,7 +47,7 @@ function Home() {
       // used to import random value from array (could use with non-integer values, it uses the index)
       // let  randomNumber = responses[Math.floor(Math.random() * responses.length)];
 
-      return Math.floor(Math.random() * (end - start + 1)) + start;
+      return Math.floor(Math.random() * end + start);
     }
 
 
