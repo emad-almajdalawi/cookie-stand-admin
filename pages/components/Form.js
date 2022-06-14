@@ -9,20 +9,20 @@ function Form(props) {
         </div>
         <div className="grid grid-cols-6 grid-rows-1  align-middle">
           <label htmlFor="location" className="grid grid-cols-1 ">Location</label>
-          <input type="text" id="location" className="col-span-5 h-7" />
+          <input required type="text" id="location" className="col-span-5 h-7" />
         </div>
         <div className="grid grid-cols-4 grid-rows-1 text-center gap-2 ">
           <div className="grid grid-cols-1 grid-rows-2 bg-emerald-300 rounded p-2" >
             <label htmlFor="minCust">Minimum customers per hour</label>
-            <input type="number" id="minCust" />
+            <input required type="number" id="minCust" />
           </div>
           <div className="grid grid-cols-1 grid-rows-2 bg-emerald-300 rounded p-2">
             <label htmlFor="maxCust">Maximum customers per hour</label>
-            <input type="number" id="maxCust" />
+            <input required type="number" id="maxCust" />
           </div>
           <div className="grid grid-cols-1 grid-rows-2 bg-emerald-300 rounded p-2">
             <label htmlFor="avgCookies">Average cookies per sale</label>
-            <input type="number" id="avgCookies" />
+            <input required type="number" id="avgCookies" />
           </div>
           <button type="submit" className="bg-emerald-600 w-full h-full justify-self-center self-center shadow hover:bg-emerald-200 focus:shadow-outline focus:outline-none py-2 px-4 rounded"> Create </button>
         </div>
