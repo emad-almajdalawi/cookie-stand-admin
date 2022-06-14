@@ -57,7 +57,7 @@ function ReportTable(props) {
                         })
                     }
                 </tbody>
-                <tfoot>
+                <tfoot className="bg-emerald-600">
                     <tr>
                         <td>Total</td>
                         {
