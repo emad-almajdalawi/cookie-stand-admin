@@ -7,11 +7,12 @@ function Form(props) {
         <div className='text-center'>
           <label htmlFor='title'>Create Cookie Stand</label>
         </div>
-        <div className="grid grid-cols-6 grid-rows-1  align-middle">
-          <label htmlFor="location" className="grid grid-cols-1 ">Location</label>
-          <input required type="text" id="location" className="col-span-5 h-7" />
+        <div className="grid grid-cols-6 grid-rows-2  align-middle gap-2">
+          <label htmlFor="location" className="grid grid-cols-1 col-span-4">Location</label>
+          <button type="submit" className="bg-emerald-600 w-full h-full justify-self-center self-center shadow hover:bg-emerald-200 focus:shadow-outline focus:outline-none py-2 px-4 rounded row-span-2 col-span-2"> Create </button>
+          <input required type="text" id="location" className="col-span-4 h-7" />
         </div>
-        <div className="grid grid-cols-4 grid-rows-1 text-center gap-2 ">
+        <div className="grid grid-cols-3 grid-rows-1 text-center gap-2 ">
           <div className="grid grid-cols-1 grid-rows-2 bg-emerald-300 rounded p-2" >
             <label htmlFor="minCust">Minimum customers per hour</label>
             <input required type="number" id="minCust" />
@@ -24,7 +25,6 @@ function Form(props) {
             <label htmlFor="avgCookies">Average cookies per sale</label>
             <input required type="number" id="avgCookies" />
           </div>
-          <button type="submit" className="bg-emerald-600 w-full h-full justify-self-center self-center shadow hover:bg-emerald-200 focus:shadow-outline focus:outline-none py-2 px-4 rounded"> Create </button>
         </div>
       </form>
     </div>
