@@ -12,4 +12,4 @@ Web application build on Next.JS and TailwindCSS.
 
 <br>
 
-[GitHub Pull Requests](https://github.com/emad-almajdalawi/cookie-stand-admin/pull/1)
+[GitHub Pull Requests](https://github.com/emad-almajdalawi/cookie-stand-admin/pull/2)
