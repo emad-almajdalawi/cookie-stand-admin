@@ -1,15 +1,38 @@
-import Home from './components/CookieStandAdmin'
-import { useState } from 'react'
+import CookieStandAdmin from './components/CookieStandAdmin'
+import { useState, useEffect } from 'react'
 import Login from './components/Login'
+import axios from "axios"
 
 function index() {
-  const [loggedIn, setLoggedIn] = useState(false)
-  function logInHandler() {
-    setLoggedIn(true)
+  const [token, setToken] = useState(null)
+  const [invalidLogIn, setInvalidLogIn] = useState(false)
+
+  function logInHandler(e) {
+    e.preventDefault()
+    // setLoggedIn(true)
+    const userData = { username: e.target.username.value, password: e.target.password.value }
+
+    if (localStorage.token === undefined) {
+      axios.post("https://cookies-stand-401.herokuapp.com/api/token/", userData).then(res => {
+        console.log(res.data)
+        localStorage.setItem('token', res.data.access) // you can add access directly to the token (setToken)
+        setToken(res.data.access)
+      })
+        .catch(err => {
+          console.log(err)
+          setInvalidLogIn(true)
+        })
+    }
+    else {
+      setToken(localStorage.getItem("token"))
+    }
+
   }
+
+
   return (
     <div>
-      {loggedIn ? <Home setLoggedIn={setLoggedIn} /> : <Login logInHandler={logInHandler} />}
+      {token ? <CookieStandAdmin setToken={setToken} token={token} /> : <Login logInHandler={logInHandler} invalidLogIn={invalidLogIn} />}
     </div>
   )
 }

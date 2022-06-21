@@ -3,7 +3,8 @@ import Link from 'next/link'
 function Header(props) {
 
   function LogoutHandler() {
-    props.setLoggedIn(false)
+    props.setToken(null)
+    localStorage.removeItem("token")
   }
 
   return (
